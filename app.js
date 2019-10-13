@@ -2,7 +2,7 @@ var JAPANESE_CHAR_REGEX = new RegExp(/^[\u30a0-\u30ff\u3040-\u309f\u3005-\u3006\
 var DATETIME_ROW_REGEX = new RegExp(/^[①-⑳㉑-㊿].*$/);
 var DATETIME_PART_REGEX = new RegExp(/^[①-⑳㉑-㊿](\d{1,2})月(\d{1,2})日\(.{1,3}\)(\d{1,2}):(\d{2})-(\d{1,2}):(\d{2})$/);
 
-function doGet (e) {
+function getEvents (e) {
   var inputText = e.parameter.text;
   var rows = inputText.split('\n').map(function (row) {
     return row.replace(/ /g, '');
@@ -40,7 +40,7 @@ function doGet (e) {
     }
   });
 
-  Logger.log(events);
+  return events;
 }
 
 function getDatetimes (row) {
