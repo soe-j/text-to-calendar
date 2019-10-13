@@ -7,4 +7,5 @@ $ npm run clasp login
 $ npm run clasp create --type webapp
 $ npm run clasp open
 $ npm run clasp push
+$ npm run clasp logout
 ~~~
