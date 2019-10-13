@@ -87,5 +87,5 @@ if (typeof process !== 'undefined') {
     moment: require ('moment'),
   };
 
-  exports.doGet = doGet;
+  exports.getEvents = getEvents;
 }

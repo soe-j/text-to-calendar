@@ -72,14 +72,14 @@ var text = [
 ].join('\n');
 
 if (typeof process !== 'undefined') {
-  var doGet = require('./index').doGet;
+  var getEvents = require('./app').getEvents;
   test();
 }
 
 function test () {
-  doGet ({
+  console.log(getEvents({
     parameter: {
       text: text,
-    },
-  });
+    }
+  }));
 }
